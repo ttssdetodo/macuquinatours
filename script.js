@@ -13,9 +13,15 @@ const CONTACT = {
   email: 'contacto@macuquinatours.com'
 };
 
-/* VIDEO DE LA HISTORIA DE POTOSÍ → pega entre las comillas el enlace de YouTube
-   Ejemplo:  'https://www.youtube.com/watch?v=XXXXXXXXXXX'   (déjalo '' para mostrar "Próximamente") */
-const HISTORIA_VIDEO = 'https://www.youtube.com/watch?v=wQvbu-Ytd6U';
+/* VIDEOS DE LA HISTORIA DE POTOSÍ → pega cada enlace de YouTube entre las comillas.
+   Los espacios que dejes vacíos ('') no se muestran. Puedes usar 1, 2, 3, 4 o los 5. */
+const HISTORIA_VIDEO = [
+  'https://youtu.be/wQvbu-Ytd6U?si=HrB501rzfCdevh88',  // VIDEO 1  →  'https://youtu.be/XXXXXXXXXXX'
+  'https://youtu.be/HiUsuvApf-s?si=2mQHoAso0m5K5xLm',  // VIDEO 2
+  'https://youtu.be/6ZBgytMGEns?si=Hx9Duq9INeWBT25d',  // VIDEO 3
+  'https://youtu.be/Z0244YeaNcg?si=FvQPg1VoQ894aJcA',  // VIDEO 4
+  ''   // VIDEO 5
+];
 
 /* ==========================================================================
    LUGARES Y RECORRIDOS
@@ -512,6 +518,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   /* Devuelve el reproductor: YouTube (enlace) o archivo propio (.mp4/.webm/.mov) */
   function playerHTML(src, title) {
+    if (Array.isArray(src)) return src.map(s => playerHTML(s, title)).join('');
     const id = ytId(src);
     if (id) return `<div class="vid-frame"><iframe src="https://www.youtube-nocookie.com/embed/${id}" title="${esc(title)}" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>`;
     if (String(src || '').trim()) return `<video class="vid-file" controls playsinline preload="metadata" src="${esc(src)}" title="${esc(title)}"></video>`;
