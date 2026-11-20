@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Macuquina Tours · Turismo en Potosí, Bolivia</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <meta name="description" content="Macuquina Tours: recorridos guiados por los lugares más emblemáticos de Potosí, Bolivia. Cerro Rico, Casa de Moneda, catedral, conventos, Ojo del Inca y las leyendas de Potosí.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="legends.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand">
+        <img class="brand-img" src="logo.png" alt="Logo Macuquina Tours">
+        <span class="brand-text">
+          <span class="brand-name">Macuquina Tours</span>
+          <span class="brand-tag">TURISMO EN POTOSÍ</span>
+        </span>
+      </a>
+      <button class="menu-btn" id="menu-btn" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#lugares">Lugares</a></li>
+          <li><a class="nav-link" href="#historia">Historia</a></li>
+          <li><a class="nav-link" href="#recomendaciones">Recomendaciones</a></li>
+          <li><a class="nav-link" href="#mapa">Mapa</a></li>
+          <li><a class="nav-link" href="#como-funciona">Cómo reservar</a></li>
+          <li><a class="nav-link" href="#faq">Preguntas</a></li>
+          <li><a class="nav-link" href="#nosotros">Quiénes somos</a></li>
+        </ul>
+        <a class="btn btn-primary nav-cta" href="#reservar">Reservar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="container hero-inner">
+        <!-- LOGO CENTRAL: reemplaza logo.png por tu logo -->
+        <div class="hero-logo-badge"><img class="hero-logo" src="logo.png" alt="Logo Macuquina Tours"></div>
+        <span class="eyebrow"><i></i> Turismo en Potosí · Bolivia</span>
+        <h1 class="hero-title">Macuquina Tours</h1>
+        <p class="hero-sub">Recorre con guía local los lugares más emblemáticos de la Villa Imperial y descubre las leyendas que guarda la ciudad de la plata.</p>
+      </div>
+
+      <form class="search-card" id="search-form" role="search" autocomplete="off">
+        <div class="search-field">
+          <label for="q">¿Qué quieres visitar?</label>
+          <input id="q" type="search" placeholder="Cerro Rico, Casa de Moneda, catedral…">
+        </div>
+        <div class="search-field">
+          <label for="zone-select">Tipo de recorrido</label>
+          <select id="zone-select">
+            <option value="all">Todos</option>
+            <option value="centro">Centro histórico</option>
+            <option value="cerro">Cerro Rico</option>
+            <option value="aventura">Naturaleza y aventura</option>
+          </select>
+        </div>
+        <button class="btn btn-primary search-btn" type="submit">Buscar</button>
+      </form>
+    </section>
+
+    <!-- CONFIANZA -->
+    <div class="trust">
+      <div class="container trust-grid">
+        <div class="trust-item"><span class="trust-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span><div><strong>Guías locales</strong><span>Conocen cada rincón de Potosí</span></div></div>
+        <div class="trust-item"><span class="trust-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><strong>Recojo claro</strong><span>Punto de inicio y final definidos</span></div></div>
+        <div class="trust-item"><span class="trust-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><strong>De 1 hora a 2 días</strong><span>Elige el recorrido a tu medida</span></div></div>
+        <div class="trust-item"><span class="trust-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z"/></svg></span><div><strong>Reserva por WhatsApp</strong><span>Respuesta directa y sin vueltas</span></div></div>
+      </div>
+    </div>
+
+    <!-- INTRODUCCIÓN -->
+    <section class="intro" id="intro">
+      <div class="container intro-grid">
+        <div>
+          <span class="kicker">Potosí</span>
+          <h2 class="sec-title">Una ciudad construida sobre una montaña de plata.</h2>
+          <p>Fundada en 1545 a los pies del Cerro Rico, Potosí fue una de las ciudades más ricas del mundo. Hoy conserva su centro colonial, sus conventos, su Casa de Moneda y una tradición minera que sigue viva. Y cada rincón guarda una leyenda que los potosinos cuentan de generación en generación.</p>
+        </div>
+        <div class="facts">
+          <div class="fact"><strong>+4.000 m</strong><span>sobre el nivel del mar</span></div>
+          <div class="fact"><strong>UNESCO</strong><span>Patrimonio de la Humanidad</span></div>
+          <div class="fact"><strong>9</strong><span>lugares y recorridos</span></div>
+          <div class="fact"><strong>16</strong><span>leyendas potosinas</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LUGARES -->
+    <section id="lugares" class="bg-cream">
+      <div class="container">
+        <div class="sec-head">
+          <span class="kicker">Lugares emblemáticos</span>
+          <h2 class="sec-title">Elige tu recorrido por Potosí</h2>
+          <p class="sec-desc">Cada lugar muestra su recorrido completo: dónde te recogemos, por dónde pasamos y dónde termina. Toca una tarjeta para verlo.</p>
+        </div>
+
+        <div class="toolbar">
+          <div class="pills" role="tablist" aria-label="Filtrar lugares" id="pills">
+            <button class="pill active" data-filter="all" role="tab" aria-selected="true">Todos</button>
+            <button class="pill" data-filter="centro" role="tab" aria-selected="false">Centro histórico</button>
+            <button class="pill" data-filter="cerro" role="tab" aria-selected="false">Cerro Rico</button>
+            <button class="pill" data-filter="aventura" role="tab" aria-selected="false">Naturaleza y aventura</button>
+          </div>
+          <span class="result-count" id="result-count" aria-live="polite"></span>
+        </div>
+
+        <!-- Las tarjetas se generan desde script.js -->
+        <div class="cards-grid" id="cards-grid"></div>
+      </div>
+    </section>
+
+    <!-- VIDEO: HISTORIA DE POTOSÍ -->
+    <section id="historia" class="video-sec">
+      <div class="container">
+        <div class="sec-head text-center">
+          <span class="kicker">Mira y conoce</span>
+          <h2 class="sec-title">La historia de Potosí</h2>
+          <p class="sec-desc">De Sumaj Orcko a la Villa Imperial: el cerro, la plata y la ciudad que cambió el mundo.</p>
+        </div>
+        <div class="hist-video" id="historia-video"><!-- el video se arma desde script.js (HISTORIA_VIDEO) --></div>
+      </div>
+    </section>
+
+    <!-- RECOMENDACIONES -->
+    <section id="recomendaciones">
+      <div class="container">
+        <div class="sec-head">
+          <span class="kicker">Antes de venir</span>
+          <h2 class="sec-title">Recomendaciones para tu visita</h2>
+          <p class="sec-desc">Potosí está a más de 4.000 metros de altura. Unos cuidados simples hacen tu viaje mucho más cómodo.</p>
+        </div>
+        <div class="tips">
+          <div class="tip"><h3>Aclimátate</h3><p>Descansa el primer día, camina despacio y evita comidas pesadas.</p></div>
+          <div class="tip"><h3>Toma agua</h3><p>La altura deshidrata. Lleva una botella en todos los recorridos.</p></div>
+          <div class="tip"><h3>Abrígate en capas</h3><p>Hace sol de día y frío al atardecer y de noche. Lleva gorro y protector solar.</p></div>
+          <div class="tip"><h3>Calzado cómodo</h3><p>Las calles coloniales son empedradas y con cuestas.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAPA -->
+    <section id="mapa">
+      <div class="container">
+        <div class="sec-head">
+          <span class="kicker">Ubica tus lugares</span>
+          <h2 class="sec-title">Dónde está cada recorrido</h2>
+          <p class="sec-desc">Toca una zona del mapa para ver los recorridos que salen hacia ella. Los puntos son orientativos.</p>
+        </div>
+        <div class="map-wrap">
+          <div class="map-canvas">
+            <img class="potosi-real-map" src="mapa-potosi.png" alt="Mapa de Potosí con las zonas turísticas" draggable="false">
+            <button class="map-pin active" style="top: 37%; left: 51%;" data-point="centro" aria-label="Centro histórico"><span class="pin-pulse"></span><span class="pin-icon"></span><span class="pin-label">Centro histórico</span></button>
+            <button class="map-pin" style="top: 80%; left: 53%;" data-point="cerro" aria-label="Cerro Rico"><span class="pin-pulse"></span><span class="pin-icon"></span><span class="pin-label">Cerro Rico</span></button>
+            <button class="map-pin" style="top: 12%; left: 48%;" data-point="tarapaya" aria-label="Tarapaya, Ojo del Inca"><span class="pin-pulse"></span><span class="pin-icon"></span><span class="pin-label">Hacia Tarapaya ↑</span></button>
+            <button class="map-pin" style="top: 66%; left: 80%;" data-point="kari-kari" aria-label="Cordillera Kari Kari"><span class="pin-pulse"></span><span class="pin-icon"></span><span class="pin-label">Kari Kari</span></button>
+            <span class="map-note">Ubicaciones orientativas · Mapa © colaboradores de OpenStreetMap</span>
+          </div>
+          <aside class="map-panel" id="map-panel">
+            <span class="panel-tag" id="map-panel-tag">ZONA 01</span>
+            <h3 class="panel-title" id="map-panel-title">Centro histórico</h3>
+            <p class="panel-text" id="map-panel-desc"></p>
+            <h4 class="panel-list-title">Recorridos en esta zona</h4>
+            <ul class="panel-tours" id="map-panel-tours"></ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- CÓMO RESERVAR -->
+    <section id="como-funciona" class="bg-cream">
+      <div class="container">
+        <div class="sec-head text-center">
+          <span class="kicker">Así de fácil</span>
+          <h2 class="sec-title">Cómo es tu recorrido</h2>
+        </div>
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><h3>Reserva</h3><p>Elige tu lugar y escríbenos por WhatsApp con la fecha y el número de personas.</p></div>
+          <div class="step"><div class="step-num">2</div><h3>Te recogemos</h3><p>Nos encontramos en el punto de recojo indicado en cada recorrido.</p></div>
+          <div class="step"><div class="step-num">3</div><h3>Recorres con guía</h3><p>Paradas explicadas por un guía local, con tiempo para fotos y preguntas.</p></div>
+          <div class="step"><div class="step-num">4</div><h3>Regresas</h3><p>Terminamos en el punto final del recorrido, normalmente donde empezamos.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <div class="sec-head text-center">
+          <span class="kicker">Preguntas frecuentes</span>
+          <h2 class="sec-title">Lo que más nos preguntan</h2>
+        </div>
+        <div class="faq">
+          <details open><summary>¿Dónde me recogen?</summary><p>En cada recorrido indicamos el punto de recojo. Por defecto es la Plaza 10 de Noviembre, frente a la Catedral. Escríbenos si prefieres otro lugar del centro.</p></details>
+          <details><summary>¿Cómo reservo?</summary><p>Abre el recorrido que te interesa y toca “Reservar por WhatsApp”. Te confirmamos disponibilidad, horario y detalles.</p></details>
+          <details><summary>¿Qué debo llevar?</summary><p>Ropa de abrigo en capas, protector solar, agua, calzado cómodo y algo de efectivo. Para el Ojo del Inca, traje de baño y toalla.</p></details>
+          <details><summary>¿Es difícil por la altura?</summary><p>Potosí está a más de 4.000 m. Si llegas de zonas bajas, descansa un día antes y camina despacio. El tour de minas y la caminata del Kari Kari requieren buena condición física.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIÉNES SOMOS -->
+    <section id="nosotros" class="about-sec">
+      <div class="container">
+        <div class="sec-head">
+          <span class="kicker">Quiénes somos</span>
+          <h2 class="sec-title">Macuquina Tours</h2>
+          <p class="about-slogan">“Descubre la Historia, Vive la Aventura”</p>
+        </div>
+
+        <div class="ab-mvv">
+          <article class="ab-card ab-red"><small>Misión</small><p>Brindar servicios turísticos memorables, seguros y sostenibles, conectando a los viajeros de todo el mundo con la riqueza histórica, arqueológica y natural de Potosí y Bolivia, preservando nuestra identidad local.</p></article>
+          <article class="ab-card ab-red"><small>Visión</small><p>Posicionarnos para el 2030 como la agencia receptiva de referencia en Bolivia y Sudamérica, reconocida internacionalmente por la excelencia en el servicio, la sostenibilidad y la difusión patrimonial.</p></article>
+          <article class="ab-card ab-red"><small>Valores</small>
+            <ul class="ab-values">
+              <li><strong>Autenticidad:</strong> respeto profundo por las raíces locales.</li>
+              <li><strong>Seguridad:</strong> rigor operativo en cada excursión.</li>
+              <li><strong>Hospitalidad:</strong> calidez originaria en el trato.</li>
+              <li><strong>Pasión:</strong> orgullo por nuestra tierra y cultura.</li>
+            </ul>
+          </article>
+        </div>
+
+        <h3 class="ab-h">Contáctanos</h3>
+        <div class="ab-contact">
+          <div><small>Teléfono fijo</small><a href="tel:+59126224040">+591 (2) 622-4040</a></div>
+          <div><small>Celular / Móvil</small><a href="tel:+59171234567">+591 71234567</a></div>
+          <div><small>Correo</small><a href="mailto:contacto@macuquinatours.com">contacto@macuquinatours.com</a></div>
+          <div><small>Dirección</small><span>Calle Ayacucho #45, Potosí - Bolivia</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="reservar">
+      <div class="container cta-inner">
+        <div>
+          <h2>Potosí te espera. Reserva tu recorrido con Macuquina Tours.</h2>
+          <p>Escríbenos y armamos tu visita.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-light" href="#" data-wa="Hola Macuquina Tours, quiero información sobre los recorridos en Potosí." target="_blank" rel="noopener">Escribir por WhatsApp</a>
+          <a class="btn btn-outline-light" href="#lugares">Ver los lugares</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <!-- FOTOS: las imágenes de los lugares están junto a index.html. Reemplaza cada PNG por tu foto con el mismo nombre. -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img class="footer-logo" src="logo.png" alt="Logo Macuquina Tours">
+          <span class="footer-name">Macuquina Tours</span>
+          <p>Recorridos guiados por los lugares más emblemáticos de Potosí, Bolivia.</p>
+        </div>
+        <div>
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#lugares">Lugares y recorridos</a></li>
+            <li><a href="#mapa">Mapa</a></li>
+            <li><a href="#nosotros">Quiénes somos</a></li>
+            <li><a href="#recomendaciones">Recomendaciones</a></li>
+            <li><a href="#faq">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <p>WhatsApp: <span data-wa-label></span></p>
+          <p>Correo: <a data-email href="#"></a></p>
+          <p>Potosí, Bolivia</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; Macuquina Tours — Potosí, Bolivia. Todos los derechos reservados.</span>
+        <span>Potosí · Villa Imperial</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FICHA DEL RECORRIDO -->
+  <div class="modal-overlay" id="modal-overlay" aria-hidden="true">
+    <div class="modal-sheet" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" id="modal-close-btn" aria-label="Cerrar ventana">&times;</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+  <div class="modal-overlay legend-overlay" id="legend-overlay" aria-hidden="true">
+    <div class="legend-sheet" role="dialog" aria-modal="true" aria-labelledby="legend-title">
+      <button class="modal-close" id="legend-close-btn" aria-label="Cerrar leyenda">&times;</button>
+      <div id="legend-content"></div>
+    </div>
+  </div>
+  <div class="mobile-bar" id="mobile-bar"></div>
+
+</body>
+</html>
